@@ -22,7 +22,7 @@ class example extends Component {
   render() {
     if (this.state.greeting) return this.renderAfterButton();
     return (
-      <View accessibilityLabel="welcome" style={{flex: 1, paddingTop: 20, justifyContent: 'center', alignItems: 'center'}}>
+      <View testID="app-root" accessibilityLabel="app-root" style={{flex: 1, paddingTop: 20, justifyContent: 'center', alignItems: 'center'}}>
           <Text h1>Welcome</Text>
           <Modal 
             animationType="slide"
@@ -51,9 +51,9 @@ class example extends Component {
             <Text>Show Modal</Text>
           </Button>
           
-          <Input placeholder='TEXT INPUT' testID="mytextinput"/>
+          <Input placeholder='TEXT INPUT' testID="mytextinput" accessibilityLabel="mytextinput"/>
 
-          <ScrollView accessibilityLabel="scroll" style={styles.scrollView}>
+          <ScrollView testID="scroll" accessibilityLabel="scroll" style={styles.scrollView}>
             <Text style={styles.text}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
